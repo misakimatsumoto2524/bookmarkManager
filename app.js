@@ -1,10 +1,16 @@
-var express = require('express');
-var app = express();
+var bookmarkManager = angular.module('bookmarkManager', []);
 
-var port = process.env.PORT || 3000;
+//bookmarkManager.config(function ($routeProvider) {
+//  $routeProvider
+//    .when('/', {
+//        templateUrl: './index.html',
+//    })
+//
+//});
 
-app.use('/assets', express.static(__dirname + '/public'));
 
-app.set('view engine', 'ejs');
+bookmarkManager.controller('TimeController', function($scope) {
+  console.log('yoyoyo');
+  $scope.date = new Date();
+});
 
-app.listen(port);
